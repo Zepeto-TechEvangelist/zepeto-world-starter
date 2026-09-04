@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "last_updated": "2026-01-01",
+  "description": "사용자 명시 결정 보존 UI 파일 목록(예시). PreToolUse가 Edit/Write 대상 검사. 실제 배포 전 여러분 프로젝트의 보존 대상 파일 패턴과 보호 레포명으로 아래 예시를 교체하세요.",
+  "patterns": [
+    {
+      "pattern": "*\\status_uitk_v*_mock.html",
+      "reason": "예시: 사용자가 확정한 UI mock 버전 — 자동 polish로 되돌리지 말 것",
+      "source": "feedback_preserve_user_explicit_ui_decisions"
+    },
+    {
+      "pattern": "*\\assets\\uitk\\*_uitk_*.html",
+      "reason": "예시: UI Toolkit 마스터 mock 일괄 polish 완료본",
+      "source": "feedback_master_mockup_index"
+    },
+    {
+      "pattern": "*\\MainSceneController*.cs",
+      "reason": "예시: 메인 씬 컨트롤러 — inline 우선 결이 적용된 파일",
+      "source": "feedback_poc_inline_over_component"
+    }
+  ],
+  "deny_commands": [
+    {
+      "pattern": "(^|[;&|]\\s*)git\\s+(-C\\s+\\S*your-main-repo\\S*\\s+)?push\\s+.*your-main-repo",
+      "reason": "예시: 메인 레포 push 금지 패턴 — 'your-main-repo'를 실제 보호 대상 레포명으로 바꾸세요 (git -C·복합 명령 포함)",
+      "source": "feedback_no_push"
+    },
+    {
+      "pattern": "(^|[;&|]\\s*)git\\s+-C\\s+\\S*your-main-repo\\S*\\s+push",
+      "reason": "예시: 보호 레포 push 금지 (-C 경로 지정형) — 레포명을 실제 값으로 교체",
+      "source": "feedback_no_push"
+    },
+    {
+      "pattern": "(^|[;&|]\\s*)rm\\s+-rf\\b",
+      "reason": "재귀 강제 삭제 = 일반 위험 (복합 명령 포함)"
+    },
+    {
+      "pattern": "(^|[;&|]\\s*)Remove-Item\\s+.*-Recurse\\s+.*-Force",
+      "reason": "PowerShell 재귀 강제 삭제 = 일반 위험"
+    }
+  ]
+}

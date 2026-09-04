@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "last_updated": "2026-01-01",
+  "description": "UserPromptSubmit hook 키워드 → 메모리 매핑. 예시 3건만 포함되어 있습니다. /world-retro를 반복하며 여러분의 프로젝트 키워드로 이 파일을 직접 확장하세요.",
+  "mappings": [
+    {
+      "keywords": [
+        "검색기능",
+        "room search",
+        "검색 UI"
+      ],
+      "memories": [
+        "project_example_search_redesign.md",
+        "reference_figma_mcp_windows_setup.md",
+        "feedback_preserve_user_explicit_ui_decisions.md"
+      ]
+    },
+    {
+      "keywords": [
+        "buildit",
+        "빌드잇",
+        "1.0.11",
+        "포팅"
+      ],
+      "memories": [
+        "project_example_buildit_porting.md",
+        "reference_buildit_example_env.md",
+        "feedback_buildit_base_layer_principle.md",
+        "reference_buildit_editor_log_debug.md"
+      ]
+    },
+    {
+      "keywords": [
+        "uitk",
+        "UI Toolkit",
+        "modal overlay",
+        "USS"
+      ],
+      "memories": [
+        "feedback_master_mockup_index.md",
+        "reference_uitk_modal_pattern.md",
+        "feedback_ugui_nested_canvas_breaks_button.md",
+        "feedback_scale_composite_prefab_localscale.md"
+      ]
+    }
+  ]
+}
